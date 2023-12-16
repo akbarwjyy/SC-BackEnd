@@ -4,7 +4,7 @@ const { Produk, Produsen } = models;
 module.exports = {
   produkA: async (req, res) => {
     const data = await Produk.findAll({ include: Produsen });
-    // findAll digunakan untuk
+    // findAll digunakan untuk mengambil semua catatan dari tabel di database Anda.
     res.status(200).json({
       message: "success",
       data: data,
